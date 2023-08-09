@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>focus space timer</title>
+
+    <!-- FONT -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <!-- ICONS -->
+    <script src="https://kit.fontawesome.com/8429ac986d.js" crossorigin="anonymous"></script>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+    <section>
+        <div class="container">
+            <h1>focus space timer</h1>
+            <div class="wpanel">
+                <p id="work">work</P>
+            </div>
+            <div class="brkpanel-container">
+                <div id="sbpanel" class="brkpanels">
+                    <p id="sbreak">short break</p>
+                </div>
+                <div id="lbpanel" class="brkpanels">
+                    <p id="lbreak">long break</p>
+                </div>
+            </div>
+        </div>
+            <div class="timer">
+                <div class="circle">
+                    <div class="time">
+                        <p id="minutes"></p>
+                        <p>:</p>
+                        <p id="seconds"></p>
+                    </div>
+                </div>
+            </div>
+            <div class="controls">
+                <button id="start" onclick="start()"><i class="fa-solid fa-play"></i></button>
+                <a id="reset" href="/"><i class="fa-solid fa-arrow-rotate-left"></i></a>
+            <button id="settings" data-toggle="modal" data-target="#custom-timer"><i class="fa-solid fa-gear"></i></button>
+
+            <div id="custom-timer" class="modal">
+                <div class="modal-content">
+                    <h2>Set Timer</h2>
+                    <label for="workTime">Work Time (minutes):</label>
+                    <input type="number" id="workTime" min="1" value="25">
+                    <label for="shortBreakTime">Short Break Time (minutes):</label>
+                    <input type="number" id="shortBreakTime" min="1" value="5">
+                    <label for="longBreakTime">Long Break Time (minutes):</label>
+                    <input type="number" id="longBreakTime" min="1" value="15">
+                    <button onclick="saveSettings()">Save</button>
+                    <button onclick="closeModal()">Close</button>
+                </div>
+            </div>
+
+        <!-- SCRIPT -->
+            <script src="script.js"></script>
+            
+        </div>
+    </section>
+
+
+    <!-- MODAL CUSTOMIZE SETTINGS
+
+    <div id="custom-timer" class="modal fade" role="dialog" style="display: none" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content popup-background">
+                <div class="modal-header">
+                    <h4 class="modal-title header-font">ENTER CUSTOM TIMER</h4>
+                    <img src="assets/images/close-button.svg" class="close" data-dismiss="modal">
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="pomodoro_value" class="text-color">POMODORO</label>
+                            <input type="text" name="pomodoro_value" id="pomodoro_value" class="form-control integer" value="25">
+                        </div>
+    
+                        <div class="form-group">
+                            <label for="short_break_value" class="text-color">SHORT BREAK</label>
+                            <input type="text" name="short_break_value" id="short_break_value" class="form-control integer" value="5">
+                        </div>
+    
+                        <div class="form-group">
+                            <label for="long_break_value" class="text-color">LONG BREAK</label>
+                            <input type="text" name="long_break_value" id="long_break_value" class="form-control integer" value="15">
+                        </div>
+    
+                        <div class="checkbox_listing"></div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="submit-button btn btn-lg" id="SaveSet">SAVE</button>
+                </div>
+            </div>
+        </div>
+    </div>
+-->
+
+    <!-- SCRIPT -->
+    
+</body>
+</html>

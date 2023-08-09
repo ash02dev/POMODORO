@@ -1,0 +1,233 @@
+:root {
+    font-size: 62.5%; /* 1rem = 16px */
+
+    --color-primary: #2a244c;
+    --color-secondary: #C33764;
+    --color-font: #ffffff;
+    --color-shadow: #393e79;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    background: -webkit-linear-gradient(to right, #182061, #2a244c);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #182061, #2a244c); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    font-size: 1.6rem;
+    font-family: 'Open sans', sans-serif;
+}
+
+p,
+i, 
+h1 {
+    color: var(--color-font);
+}
+
+i {
+    font-size: 3.2rem;
+}
+
+h1 {
+    margin-bottom: 5rem;
+    font-size: 3.2rem;
+}
+
+/* -----CONTENT----- */
+section {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    flex-direction: column;
+}
+
+.container {
+    width: min(70rem, 100%);
+    margin-top: 10rem;
+    margin-inline: auto;
+    padding-inline: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.wpanel {
+    display: grid;
+    grid-template-columns: 1fr;
+    text-align: center;
+    width: 20rem;
+    margin-block: 2rem;
+    padding: 1rem;
+    border-radius: 10rem;
+    -webkit-box-shadow: 0px 0px 15px 10px var(--color-shadow); 
+    box-shadow: 0px 0px 15px 10px var(--color-shadow);
+}
+
+.wpanel p {
+    opacity: .8;
+    transition: 1s ease-in;
+}
+
+.wpanel p.active {
+    opacity: 1;
+    color: var(--color-secondary);
+}
+
+.brkpanel-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.brkpanels {
+    flex: 0 0 calc(50% - 10px);
+    margin: 5px;
+    padding: 10px;
+}
+#sbpanel {
+    text-align: center;
+    width: 20rem;
+    margin-block: 2rem;
+    padding: 1rem;
+    border-radius: 10rem;
+    -webkit-box-shadow: 0px 0px 15px 10px var(--color-shadow); 
+    box-shadow: 0px 0px 15px 10px var(--color-shadow);
+}
+
+#sbpanel p {
+    opacity: .8;
+    transition: 1s ease-in;
+}
+
+#sbpanel p.active {
+    opacity: 1;
+    color: var(--color-secondary);
+}
+
+#lbpanel {
+    text-align: center;
+    width: 20rem;
+    margin-block: 2rem;
+    padding: 1rem;
+    border-radius: 10rem;
+    -webkit-box-shadow: 0px 0px 15px 10px var(--color-shadow); 
+    box-shadow: 0px 0px 15px 10px var(--color-shadow);
+}
+
+#lbpanel p {
+    opacity: .8;
+    transition: 1s ease-in;
+}
+
+#lbpanel p.active {
+    opacity: 1;
+    color: var(--color-secondary);
+}
+
+
+.timer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30rem;
+    height: 30rem;
+    border-radius: 50%;
+    -webkit-box-shadow: 0px 0px 15px 10px var(--color-shadow); 
+    box-shadow: 0px 0px 15px 10px var(--color-shadow);
+}
+
+.circle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 26rem;
+    height: 26rem;
+    border-radius: 50%;
+    background-color: var(--color-secondary);
+    position: relative;
+}
+
+.circle::before {
+    content: '';
+    position: absolute;
+    width: 95%;
+    height: 95%;
+    border-radius: 50%;
+    background-color: var(--color-primary);
+}
+
+.time {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+}
+
+.time p {
+    font-size: 5.6rem;
+}
+
+.time p:nth-of-type(2) {
+    position: relative;
+    top: -.5rem;
+    margin-inline: 1rem;
+}
+
+.controls {
+    margin-top: 3rem;
+}
+
+.controls button {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.controls #reset {
+    display: none;
+}
+
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.modal-content {
+    background-color: #393e79;
+    color: white;
+    width: 300px;
+    margin: 100px auto;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+input {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Jura|Rajdhani');
+
+
+.star{display: block; background-color: #ffffff; position: absolute; border-radius: 100%; animation-timing-function: linear;animation-iteration-count: infinite;}
+
+@keyframes move_right {
+   from { transform: rotate(0deg) translateX(8px) rotate(0deg); }
+    to   { transform: rotate(360deg) translateX(8px) rotate(-360deg); }
+}
+
+@keyframes move_left {
+   from { transform: rotate(0deg) translateX(8px) rotate(0deg); }
+    to   { transform: rotate(-360deg) translateX(8px) rotate(360deg); }
+}
+
+
